@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chenora Weaves</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, crafted, quick to use on a phone
+   IDEA: a woven label sewn into a textile
+   PICTURE: a band of woven threads at the top, drawn in SVG
+   COLOUR and TYPE: indigo field, madder red + saffron threads; Marcellus + Karla
+   LAYOUT: one column card, big tap buttons */
+:root{color-scheme:light dark;--bg:light-dark(#f6f4f0,#14182b);--card:light-dark(#ffffff,#1d2340);--ink:light-dark(#1b1f33,#f1efe9);--mute:light-dark(#5b6075,#aeb2c6);--line:light-dark(#e4e1da,#2f3658);--ind:#26306b;--red:#a83a2c;--saf:#e0a526}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Karla,system-ui,sans-serif;overflow-x:clip}
+.top{background:var(--ind);position:relative;overflow:hidden}
+.top svg{display:block;width:100%;height:150px}
+.wrap{max-width:480px;margin:-56px auto 0;padding:0 16px 40px;position:relative}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 20px 22px;box-shadow:0 10px 30px rgba(20,24,43,.12)}
+.mark{width:72px;height:72px;border-radius:50%;background:var(--ind);border:3px solid var(--saf);display:grid;place-items:center;margin:-62px auto 12px}
+.mark span{font:34px/1 Marcellus,serif;color:#fff}
+h1{font:400 34px/1.05 Marcellus,Georgia,serif;text-align:center;margin:0 0 4px;text-wrap:balance}
+.sub{text-align:center;color:var(--mute);margin:0 0 22px;font-size:15px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+a.btn{display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:600;background:transparent}
+a.btn:focus-visible{outline:3px solid var(--saf);outline-offset:2px}
+a.btn svg{width:22px;height:22px;flex:none}
+a.wide{grid-column:1/-1}
+a.pri{background:var(--red);border-color:var(--red);color:#fff}
+.btn small{display:block;font-weight:400;font-size:13px;color:var(--mute);overflow-wrap:anywhere}
+.pri small{color:#f7dcd6}
+h2{font:600 13px/1 Karla,sans-serif;color:var(--mute);margin:22px 0 10px}
+.foot{text-align:center;color:var(--mute);font-size:13px;margin-top:18px}
+@media(prefers-reduced-motion:no-preference){.thr{animation:sl 9s linear infinite}@keyframes sl{to{transform:translateX(-80px)}}}
+</style>
+</head>
+<body>
+<div class="top" aria-hidden="true">
+<svg viewBox="0 0 800 150" preserveAspectRatio="xMidYMid slice">
+<defs>
+<pattern id="w" width="80" height="30" patternUnits="userSpaceOnUse">
+<rect width="80" height="30" fill="#26306b"/>
+<rect y="3" width="80" height="6" fill="#a83a2c"/><rect y="18" width="80" height="6" fill="#e0a526" opacity=".9"/>
+<rect x="6" width="12" height="30" fill="#f1efe9" opacity=".18"/><rect x="46" width="12" height="30" fill="#f1efe9" opacity=".18"/>
+<rect x="6" y="3" width="12" height="6" fill="#26306b" opacity=".55"/><rect x="46" y="18" width="12" height="6" fill="#26306b" opacity=".55"/>
+</pattern>
+</defs>
+<g class="thr"><rect x="0" y="0" width="900" height="150" fill="url(#w)"/></g>
+<rect width="800" height="150" fill="url(#g)"/>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset=".4" stop-color="#26306b" stop-opacity="0"/><stop offset="1" stop-color="#26306b" stop-opacity=".85"/></linearGradient>
+</svg>
+</div>
+<main class="wrap">
+<div class="card">
+<div class="mark"><span>C</span></div>
+<h1>Chenora Weaves</h1>
+<p class="sub">Tap below to call, message, or follow us</p>
+
+<div class="grid">
+<a class="btn pri wide" href="tel:+971547060078"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>Call<small>+971 54 706 0078</small></span></a>
+<a class="btn wide" href="https://wa.me/971547060078"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg><span>WhatsApp<small>+971 54 706 0078</small></span></a>
+<a class="btn wide" href="mailto:chenoraweaves@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email<small>chenoraweaves@gmail.com</small></span></a>
+<a class="btn wide" href="https://chenoraweaves.com/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Website<small>chenoraweaves.com</small></span></a>
+</div>
+
+<h2>Follow us</h2>
+<div class="grid">
+<a class="btn" href="https://www.instagram.com/chenoraweaves/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Instagram</a>
+<a class="btn" href="https://www.facebook.com/chenoraweaves"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M15 8h-2a2 2 0 0 0-2 2v11M9 13h6"/></svg>Facebook</a>
+<a class="btn" href="https://www.pinterest.com/chenoraweaves/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M11 8v13M11 8a3 3 0 1 1 1 6"/></svg>Pinterest</a>
+<a class="btn" href="https://www.tiktok.com/@chenoraweaves"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v12a4 4 0 1 1-4-4M14 3a5 5 0 0 0 5 5"/></svg>TikTok</a>
+</div>
+</div>
+<p class="foot">@chenoraweaves on every platform</p>
+</main>
+</body>
+</html>
